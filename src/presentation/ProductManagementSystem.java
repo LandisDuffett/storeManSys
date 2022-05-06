@@ -44,10 +44,10 @@ public class ProductManagementSystem {
 					ProductPojo Prod = new ProductPojo();
 					System.out.println("***************************************************************************************");
 					System.out.println("Enter product name:");
-					String prodName = scan.next();
+					scan.nextLine();
+					String prodName = scan.nextLine();
 					Prod.setProductName(prodName);
 					System.out.println("Enter product description: ");
-					scan.nextLine();
 					String prodDescr = scan.nextLine();
 					Prod.setProductDescription(prodDescr);
 					System.out.println("Enter product price:");
@@ -61,6 +61,7 @@ public class ProductManagementSystem {
 					System.out.println("Do you want to continue?(y/n)");
 					proceed = scan.next().charAt(0);
 					break;
+			
 				case 3:
 					List<ProductPojo> allProducts = productService.getAllProducts();
 					System.out.println("***************************************************************************************");
@@ -97,7 +98,8 @@ public class ProductManagementSystem {
 						case 1:
 							System.out.println("current name is: " + edProd.getProductName() );
 							System.out.println("enter new name: ");
-							String newName = scan.next();
+							scan.nextLine();
+							String newName = scan.nextLine();
 							edProd.setProductName(newName);
 							productService.updateProduct(edProd);
 							break;
