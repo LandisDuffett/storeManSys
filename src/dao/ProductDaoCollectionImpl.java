@@ -15,7 +15,7 @@ public class ProductDaoCollectionImpl implements ProductDao{
 	
 	public ProductDaoCollectionImpl() {
 		ProductPojo product1 = new ProductPojo(101, "Apples", "Tasty Juicy Apples!", 10, "");
-		ProductPojo product2 = new ProductPojo(102, "Bananas", "Delecious Bananas!", 8, "");
+		ProductPojo product2 = new ProductPojo(102, "Bananas", "Delicious Bananas!", 8, "");
 		ProductPojo product3= new ProductPojo(103, "Oranges", "Juicy Oranges!", 5, "");
 		allProducts.add(product1);
 		allProducts.add(product2);
